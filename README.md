@@ -7,10 +7,10 @@ With the development of public transportation nowadays, more and more people cho
 
 Must have:1.user can search for a flight by enter the departure , arrival and date.
           2.user can see the as many flights as possible,which includes price,time,and airline.
-          3.Users can log in to check the flight status they care about
-          4.User can see their fly history.
+          
+          
 Should have:1.User can select the flight to see the more information(seat,food)
-            2.User can edit his information
+            3.Users can log in to check the flight status they care about
          
 
 Could have:1.It may have a link to the airline

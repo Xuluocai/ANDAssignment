@@ -5,7 +5,7 @@ With the development of public transportation nowadays, more and more people cho
 
 
 
-Must have:1.user can search for a flight by enter the departure , arrival and date.
+Must have:1.user can search for a flight by enter the departure , arrival 
           2.user can see the as many flights as possible,which includes price,time,and airline.
           
           

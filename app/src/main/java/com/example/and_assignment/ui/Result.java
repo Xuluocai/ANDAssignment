@@ -44,7 +44,7 @@ public class Result extends AppCompatActivity {
     }
 
     public void back(View view) {
-        startActivity(new Intent(this,MainActivity.class));
+        startActivity(new Intent(this, MainActivity1.class));
     }
 
     public void web(View view) {

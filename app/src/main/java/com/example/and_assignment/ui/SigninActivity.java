@@ -34,7 +34,7 @@ public class SigninActivity extends AppCompatActivity {
     }
 
     private void goToMainActivity() {
-        startActivity(new Intent(this, MainActivity.class));
+        startActivity(new Intent(this, MainActivity1.class));
         finish();
     }
 

@@ -8,12 +8,15 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.and_assignment.R;
 
 public class Result extends AppCompatActivity {
     private ResultViewModel viewModel;
-   private TextView textView;
+  private RecyclerView recyclerView;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +25,7 @@ public class Result extends AppCompatActivity {
         checkIfSignedIn();
 
         setContentView(R.layout.activity_result);
-        textView=findViewById(R.id.textView);
+
     }
 
     private void checkIfSignedIn() {
@@ -46,7 +49,9 @@ public class Result extends AppCompatActivity {
     public void back(View view) {
         startActivity(new Intent(this, MainActivity1.class));
     }
-
+public void moreInformation(View view){
+        startActivity(new Intent(this,InformationActivity.class));
+}
     public void web(View view) {
         String html="http://www.csair.com";
         textView.setAutoLinkMask(Linkify.ALL);

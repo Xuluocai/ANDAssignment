@@ -8,13 +8,22 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.and_assignment.R;
+import com.example.and_assignment.data.Adapter;
+import com.example.and_assignment.data.Flight;
+import com.example.and_assignment.data.FlightList;
+
+import java.util.ArrayList;
 
 public class Result extends AppCompatActivity {
     private ResultViewModel viewModel;
   private RecyclerView recyclerView;
+  private RecyclerView.Adapter adapter;
+  private RecyclerView.LayoutManager layoutManager;
+  private TextView textView;
 
 
     @Override
@@ -25,6 +34,21 @@ public class Result extends AppCompatActivity {
         checkIfSignedIn();
 
         setContentView(R.layout.activity_result);
+        textView=findViewById(R.id.book);
+        ArrayList<Flight> flightArrayList=new ArrayList<>();
+        FlightList flightList=new FlightList();
+        for (int i=0;i<flightList.getSize();i++){
+            if (flightList.getFlightByNum(i).getDeparture().equals("cph")&&flightList.getFlightByNum(i).getArrival().equals("kef")){
+                flightArrayList.add(flightList.getFlightByNum(i));
+            }
+        }
+
+        recyclerView=findViewById(R.id.FlightsRecView);
+        recyclerView.setHasFixedSize(true);
+        layoutManager=new LinearLayoutManager(this);
+        adapter=new Adapter(flightArrayList);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(adapter);
 
     }
 
@@ -46,16 +70,19 @@ public class Result extends AppCompatActivity {
     public void signOut(View view) {viewModel.signOut();
     }
 
+
     public void back(View view) {
         startActivity(new Intent(this, MainActivity1.class));
     }
-public void moreInformation(View view){
-        startActivity(new Intent(this,InformationActivity.class));
-}
-    public void web(View view) {
-        String html="http://www.csair.com";
+
+
+
+
+public void web(View view) {
+        textView.setText(textView.getText().toString());
         textView.setAutoLinkMask(Linkify.ALL);
-        textView.setText(html);
 
     }
+
+
 }

@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.and_assignment.R;
+import com.example.and_assignment.data.FlightList;
 
 public class MainActivity1 extends AppCompatActivity {
     private MainActivityViewModel viewModel;
@@ -47,13 +48,19 @@ public class MainActivity1 extends AppCompatActivity {
         viewModel.signOut();
     }
 
-    public void Rearch(View view) {
+    public void Research(View view) {
         viewModel.setDeparture(editText1.getText().toString());
         viewModel.setArrival(editText2.getText().toString());
-
-        if (viewModel.getArrival().equals("beijing")&&viewModel.getDeparture().equals("shanghai")){
-        startActivity(new Intent(this,Result.class));
-        finish();
+        FlightList flightList=new FlightList();
+        if (flightList.getFlightByArrival(viewModel.getArrival()).getDeparture().equals(viewModel.getDeparture()))
+        {
+            if (viewModel.getDeparture().equals("beijing")&&viewModel.getArrival().equals("shanghai")){
+                startActivity(new Intent(this,Result.class));
+             finish();
+            }else if (viewModel.getDeparture().equals("cph")&&viewModel.getArrival().equals("kef")){
+                startActivity(new Intent(this,Result1.class));
+               finish();
+            }
         }
         else if(viewModel.getDeparture().isEmpty()||viewModel.getArrival().isEmpty()){
             Toast.makeText(this,"Please enter the departure or arrival",Toast.LENGTH_SHORT).show();

@@ -5,20 +5,23 @@ public class Flight {
     private String departure;
     private String arrival;
     private String seat;
-    private Status status;
+    private String status;
+    private String book;
 
-    public Flight(String flightNumber, String departure, String arrival, String seat, Status status){
+    public Flight(String flightNumber, String departure, String arrival, String seat, String status,String book){
         this.arrival=arrival;
         this.departure=departure;
         this.flightNumber=flightNumber;
         this.seat=seat;
         this.status=status;
+        this.book=book;
     }
 
     public Flight(String departure, String arrival){
         this.departure=departure;
         this.arrival=arrival;
     }
+
     public Flight(){
 
     }
@@ -39,7 +42,7 @@ public class Flight {
         return seat;
     }
 
-    public Status getStatus() {
+    public String getStatus() {
         return status;
     }
 
@@ -58,6 +61,8 @@ public class Flight {
     public void setSeat(String seat) {
         this.seat = seat;
     }
+    public void setBook(String book){this.book=book;}
+    public String getBook(){return book;}
 
 
 

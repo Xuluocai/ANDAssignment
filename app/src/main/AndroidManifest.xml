@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ANDAssignment">
         <activity android:name=".ui.Result" />
+        <activity android:name=".ui.Result1" />
         <activity android:name=".ui.MainActivity1" />
         <activity android:name=".ui.SigninActivity">
             <intent-filter>

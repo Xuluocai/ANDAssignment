@@ -1,5 +1,7 @@
 package com.example.and_assignment.data;
 
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,13 +20,20 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         public TextView departure;
         public TextView arrival;
         public TextView flightNum;
+        public TextView seat;
+        public TextView status;
         public TextView book;
         public ViewHolder(@NonNull View itemView){
             super(itemView);
             departure=itemView.findViewById(R.id.flights_departure);
             arrival=itemView.findViewById(R.id.flights_arrival);
             flightNum=itemView.findViewById(R.id.flights_flightnum);
+            seat=itemView.findViewById(R.id.flights_seat);
+            status=itemView.findViewById(R.id.flights_status);
+
             book=itemView.findViewById(R.id.book);
+            book.setText(Html.fromHtml(book.getText().toString()));
+            book.setMovementMethod(LinkMovementMethod.getInstance());
         }
     }
     public Adapter(ArrayList<Flight> flights){
@@ -45,6 +54,11 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
    holder.departure.setText(flight.getDeparture());
    holder.arrival.setText(flight.getArrival());
    holder.flightNum.setText(flight.getFlightNumber());
+   holder.book.setText(flight.getBook());
+   holder.seat.setText(flight.getSeat());
+   holder.status.setText(flight.getStatus());
+
+
     }
 
     @Override

@@ -41,12 +41,17 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/flights_flightnum"
                 android:text="Flight Number"/>
-            <Button
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="moreInformation"
+                android:id="@+id/flights_seat"
+                android:text="Flight Number"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/flights_status"
+                android:text="Flight Number"/>
 
-                />
         </LinearLayout>
 
         <TextView

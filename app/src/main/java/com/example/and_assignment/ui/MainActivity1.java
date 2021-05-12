@@ -48,20 +48,54 @@ public class MainActivity1 extends AppCompatActivity {
         viewModel.signOut();
     }
 
+
     public void Research(View view) {
         viewModel.setDeparture(editText1.getText().toString());
         viewModel.setArrival(editText2.getText().toString());
         FlightList flightList=new FlightList();
-        if (flightList.getFlightByArrival(viewModel.getArrival()).getDeparture().equals(viewModel.getDeparture()))
-        {
             if (viewModel.getDeparture().equals("beijing")&&viewModel.getArrival().equals("shanghai")){
+                Toast.makeText(this,"Searching....",Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(this,Result.class));
-             finish();
-            }else if (viewModel.getDeparture().equals("cph")&&viewModel.getArrival().equals("kef")){
+
+            }else if (viewModel.getDeparture().equals("copenhagen")&&viewModel.getArrival().equals("shanghai"))
+            {
+                Toast.makeText(this,"Searching....",Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(this,Result1.class));
-               finish();
+
+            }else if (viewModel.getDeparture().equals("shanghai")&&viewModel.getArrival().equals("beijing")){
+                Toast.makeText(this,"Searching....",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this,Result2.class));
+                finish();
+            }else if (viewModel.getDeparture().equals("shanghai")&&viewModel.getArrival().equals("copenhagen")){
+                Toast.makeText(this,"Searching....",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this,Result3.class));
+                finish();
+            } else if (viewModel.getDeparture().equals("copenhagen")&&viewModel.getArrival().equals("beijing")){
+                    Toast.makeText(this,"Searching....",Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(this,Result4.class));
+                    finish();
+            }else if (viewModel.getDeparture().equals("zurich")&&viewModel.getArrival().equals("copenhagen")){
+                Toast.makeText(this,"Searching....",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this,Result5.class));
+                finish();
+            }else if (viewModel.getDeparture().equals("copenhagen")&&viewModel.getArrival().equals("zurich")){
+                Toast.makeText(this,"Searching....",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this,Result6.class));
+                finish();
+            }else if (viewModel.getDeparture().equals("beijing")&&viewModel.getArrival().equals("copenhagen")){
+                Toast.makeText(this,"Searching....",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this,Result7.class));
+                finish();
+            }else if (viewModel.getDeparture().equals("copenhagen")&&viewModel.getArrival().equals("madrid")){
+                Toast.makeText(this,"Searching....",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this,Result8.class));
+                finish();
+            }else if (viewModel.getDeparture().equals("madrid")&&viewModel.getArrival().equals("copenhagen")){
+                Toast.makeText(this,"Searching....",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this,Result9.class));
+                finish();
             }
-        }
+
         else if(viewModel.getDeparture().isEmpty()||viewModel.getArrival().isEmpty()){
             Toast.makeText(this,"Please enter the departure or arrival",Toast.LENGTH_SHORT).show();
         }else

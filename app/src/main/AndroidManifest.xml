@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.and_assignment">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -13,6 +14,15 @@
         android:theme="@style/Theme.ANDAssignment">
         <activity android:name=".ui.Result" />
         <activity android:name=".ui.Result1" />
+        <activity android:name=".ui.Result2"/>
+        <activity android:name=".ui.Result3"/>
+        <activity android:name=".ui.Result4"/>
+        <activity android:name=".ui.Result5"/>
+        <activity android:name=".ui.Result6"/>
+        <activity android:name=".ui.Result7"/>
+        <activity android:name=".ui.Result8"/>
+        <activity android:name=".ui.Result9"/>
+
         <activity android:name=".ui.MainActivity1" />
         <activity android:name=".ui.SigninActivity">
             <intent-filter>

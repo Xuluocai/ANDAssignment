@@ -33,12 +33,12 @@ public class Result1 extends AppCompatActivity {
         viewModel.init();
         checkIfSignedIn();
 
-        setContentView(R.layout.activity_result);
+        setContentView(R.layout.activity_result1);
         textView=findViewById(R.id.book);
         ArrayList<Flight> flightArrayList=new ArrayList<>();
         FlightList flightList=new FlightList();
         for (int i=0;i<flightList.getSize();i++){
-            if (flightList.getFlightByNum(i).getDeparture().equals("cph")&&flightList.getFlightByNum(i).getArrival().equals("kef")){
+            if (flightList.getFlightByNum(i).getDeparture().equals("copenhagen")&&flightList.getFlightByNum(i).getArrival().equals("shanghai")){
                 flightArrayList.add(flightList.getFlightByNum(i));
             }
         }

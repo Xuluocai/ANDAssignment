@@ -38,7 +38,7 @@ public class Result extends AppCompatActivity {
         ArrayList<Flight> flightArrayList=new ArrayList<>();
         FlightList flightList=new FlightList();
         for (int i=0;i<flightList.getSize();i++){
-            if (flightList.getFlightByNum(i).getDeparture().equals("cph")&&flightList.getFlightByNum(i).getArrival().equals("kef")){
+            if (flightList.getFlightByNum(i).getDeparture().equals("beijing")&&flightList.getFlightByNum(i).getArrival().equals("shanghai")){
                 flightArrayList.add(flightList.getFlightByNum(i));
             }
         }

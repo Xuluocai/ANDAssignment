@@ -7,14 +7,16 @@ public class Flight {
     private String seat;
     private String status;
     private String book;
+    private String plane;
 
-    public Flight(String flightNumber, String departure, String arrival, String seat, String status,String book){
+    public Flight(String flightNumber, String departure, String arrival, String seat, String status,String book,String plane){
         this.arrival=arrival;
         this.departure=departure;
         this.flightNumber=flightNumber;
         this.seat=seat;
         this.status=status;
         this.book=book;
+        this.plane=plane;
     }
 
     public Flight(String departure, String arrival){
@@ -64,6 +66,9 @@ public class Flight {
     public void setBook(String book){this.book=book;}
     public String getBook(){return book;}
 
+    public String getPlane() {
+        return plane;
+    }
 
 
 }

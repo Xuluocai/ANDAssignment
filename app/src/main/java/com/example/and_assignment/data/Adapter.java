@@ -23,6 +23,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         public TextView seat;
         public TextView status;
         public TextView book;
+        public TextView plane;
         public ViewHolder(@NonNull View itemView){
             super(itemView);
             departure=itemView.findViewById(R.id.flights_departure);
@@ -30,6 +31,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             flightNum=itemView.findViewById(R.id.flights_flightnum);
             seat=itemView.findViewById(R.id.flights_seat);
             status=itemView.findViewById(R.id.flights_status);
+            plane=itemView.findViewById(R.id.flights_plane);
 
             book=itemView.findViewById(R.id.book);
             book.setText(Html.fromHtml(book.getText().toString()));
@@ -57,6 +59,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
    holder.book.setText(flight.getBook());
    holder.seat.setText(flight.getSeat());
    holder.status.setText(flight.getStatus());
+   holder.plane.setText(flight.getPlane());
 
 
     }

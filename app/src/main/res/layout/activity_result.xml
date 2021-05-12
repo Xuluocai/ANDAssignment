@@ -46,5 +46,15 @@
         android:layout_marginTop="?attr/actionBarSize"
         android:id="@+id/FlightsRecView"/>
 
+    <ImageView
+        android:layout_width="293dp"
+        android:layout_height="140dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.027"
+        app:srcCompat="@drawable/dog" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

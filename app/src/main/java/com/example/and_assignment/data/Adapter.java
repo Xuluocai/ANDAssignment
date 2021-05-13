@@ -5,6 +5,7 @@ import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -24,6 +25,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         public TextView status;
         public TextView book;
         public TextView plane;
+        public ImageView imageView;
         public ViewHolder(@NonNull View itemView){
             super(itemView);
             departure=itemView.findViewById(R.id.flights_departure);
@@ -32,6 +34,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             seat=itemView.findViewById(R.id.flights_seat);
             status=itemView.findViewById(R.id.flights_status);
             plane=itemView.findViewById(R.id.flights_plane);
+            imageView=itemView.findViewById(R.id.imageView);
 
             book=itemView.findViewById(R.id.book);
             book.setText(Html.fromHtml(book.getText().toString()));
@@ -52,7 +55,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull Adapter.ViewHolder holder, int position) {
    Flight flight=flights.get(position);
-
+holder.imageView.setImageResource(flight.getImageResource());
    holder.departure.setText(flight.getDeparture());
    holder.arrival.setText(flight.getArrival());
    holder.flightNum.setText(flight.getFlightNumber());

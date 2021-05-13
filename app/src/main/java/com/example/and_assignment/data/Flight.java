@@ -8,8 +8,9 @@ public class Flight {
     private String status;
     private String book;
     private String plane;
+    private int imageResource;
 
-    public Flight(String flightNumber, String departure, String arrival, String seat, String status,String book,String plane){
+    public Flight(String flightNumber, String departure, String arrival, String seat, String status,String book,String plane,int imageResource){
         this.arrival=arrival;
         this.departure=departure;
         this.flightNumber=flightNumber;
@@ -17,6 +18,7 @@ public class Flight {
         this.status=status;
         this.book=book;
         this.plane=plane;
+        this.imageResource=imageResource;
     }
 
     public Flight(String departure, String arrival){
@@ -28,6 +30,9 @@ public class Flight {
 
     }
 
+    public int getImageResource(){
+        return imageResource;
+    }
     public String getFlightNumber(){
         return flightNumber;
     }

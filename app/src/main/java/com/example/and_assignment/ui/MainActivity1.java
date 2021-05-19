@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +17,7 @@ public class MainActivity1 extends AppCompatActivity {
     private MainActivityViewModel viewModel;
     private EditText editText1;
     private EditText editText2;
+    private ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         viewModel = new ViewModelProvider(this).get(MainActivityViewModel.class);
@@ -26,6 +28,7 @@ public class MainActivity1 extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         editText1=findViewById(R.id.editTextTextPersonName);
         editText2=findViewById(R.id.editTextTextPersonName2);
+
     }
 
     private void checkIfSignedIn() {
@@ -103,5 +106,6 @@ public class MainActivity1 extends AppCompatActivity {
             Toast.makeText(this,"Unknown departure or arrival",Toast.LENGTH_SHORT).show();
         }
     }
+
 
 }

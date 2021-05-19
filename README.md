@@ -14,7 +14,9 @@ Should have:1.User can select the flight to see the more information(seat)  (don
          
 
 Could have:1.It may have a link to the airline   (done
+           
            2.It may provide various countries’ anti-epidemic policies  (not done, it's diffcult to update the policies,because different airline companies have different airline and rules,but user can find the policies from the airline website.)
+           
            3.It may provide users with the newest flight news.  (can't find an API to get the flight news)
 
 Won't have:1.It won't sell ticket.

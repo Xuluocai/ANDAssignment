@@ -6,11 +6,13 @@ With the development of public transportation nowadays, more and more people cho
 
 
 Must have:1.user can search for a flight by enter the departure , arrival  (done
+          
           2.user can see the as many flights as possible  (done 
           
           
 Should have:1.User can select the flight to see the more information(seat)  (done
-            2.Users can log in to check the flight status they care about   (done
+           
+           2.Users can log in to check the flight status they care about   (done
          
 
 Could have:1.It may have a link to the airline   (done

@@ -16,7 +16,7 @@ public class FlightList {
         flights.add(new Flight("KN5978","shanghai","beijing","Good","On time","http://www.flycua.com/","Boeing-737",R.drawable.zlh));
         flights.add(new Flight("CZ8882","shanghai","beijing","Good","On time","https://global.csair.com/","A330",R.drawable.nh));
         flights.add(new Flight("HO1253", "shanghai", "beijing", "Bad", "On time", "http://www.juneyaoair.com/","A320",R.drawable.jx));
-        flights.add(new Flight("CA878","copenhagen","beijing","Comfortable","Delay","http://www.airchina.com","A350-900",R.drawable.ca));
+        flights.add(new Flight("CA878","copenhagen","beijing","Comfortable","Delay","https://www.airchina.se/","A350-900",R.drawable.ca));
         flights.add(new Flight("CA877","beijing","copenhagen","Comfortable","Cancel","http://www.airchina.com","A350-900",R.drawable.ca));
         flights.add(new Flight("SK997","copenhagen","shanghai","Comfortable","Cancel","http://www.sas.com","A350-900",R.drawable.sas));
         flights.add(new Flight("SK998","shanghai","copenhagen","Comfortable","On time","http://www.sas.com","A350-900",R.drawable.sas));
